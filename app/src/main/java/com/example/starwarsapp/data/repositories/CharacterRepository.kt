@@ -3,7 +3,8 @@ package com.example.starwarsapp.data.repositories
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.example.starwarsapp.model.*
+import com.example.starwarsapp.data.pagingsource.CharactersPagingSource
+import com.example.starwarsapp.model.Character
 import com.example.starwarsapp.network.ApiServices
 import com.example.starwarsapp.network.SafeApiCall
 import com.example.starwarsapp.utils.Constants.NETWORK_PAGE_SIZE
@@ -20,9 +21,17 @@ class CharacterRepository @Inject constructor(private val apiServices: ApiServic
                 enablePlaceholders = false
             ),
             pagingSourceFactory = {
-                C
+                CharactersPagingSource(apiServices, search)
             }
-        )
+        ).flow
+    }
+
+    suspend fun getFilm(url: String) = safeApiCall {
+        apiServices.getFilm(url)
+    }
+
+    suspend fun getHomeWorld(url: String) = safeApiCall {
+        apiServices.getHomeWorld(url)
     }
 
 }
