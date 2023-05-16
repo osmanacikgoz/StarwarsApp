@@ -10,11 +10,11 @@ import retrofit2.http.Url
 interface ApiServices {
 
     @GET("people/?page/")
-    suspend fun getCharacters(@Query("page") page:Int): PeopleResponse
+    suspend fun getCharacters(@Query("page") page: Int): PeopleResponse
 
     @GET
-    suspend fun getFilm(@Url url:String): FilmResponse
+    suspend fun getFilm(@Url url: String): FilmResponse
 
     @GET
-    suspend fun getHomeWorld(@Url url:String): HomeWorldResponse
+    suspend fun getHomeWorld(@Url url: String): HomeWorldResponse
 }
