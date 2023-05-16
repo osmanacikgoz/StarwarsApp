@@ -2,16 +2,47 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/splashFragment"
-    android:id="@+id/nav_main">
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
 
 
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.example.starwarsapp.ui.CharacterFragment"
+        tools:layout="@layout/fragment_character">
+
+        <action
+            android:id="@+id/action_characterFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.example.starwarsapp.ui.DetailFragment"
+        android:label="Character Details"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="characterDetails"
+            app:argType="com.example.starwarsapp.model.Character" />
+    </fragment>
 
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.starwarsapp.ui.SplashFragment"
-        tools:layout ="@layout/fragment_splash">
+        tools:layout="@layout/fragment_splash">
 
+        <action
+            android:id="@+id/action_splashFragment_to_characterFragment"
+            app:destination="@id/characterFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
 
     </fragment>
 

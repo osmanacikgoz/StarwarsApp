@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/main_dark"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/skinColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/skinColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Skin Color"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/hairColor"
+                    app:layout_constraintStart_toEndOf="@id/fullName"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hairColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Hair Color"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/skinColor"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fullNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/fullName"
+                    app:layout_constraintStart_toStartOf="@id/fullName"
+                    app:layout_constraintTop_toBottomOf="@id/fullName"
+                    tools:text="Luke Skywalker" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/skinColorValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/skinColor"
+                    app:layout_constraintStart_toStartOf="@id/skinColor"
+                    app:layout_constraintTop_toBottomOf="@id/skinColor"
+                    tools:text="Fair" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hairColorValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/hairColor"
+                    app:layout_constraintStart_toStartOf="@id/hairColor"
+                    app:layout_constraintTop_toBottomOf="@id/hairColor"
+                    tools:text="Blonde" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintTop_toBottomOf="@id/skinColorValue" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Heigth"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/skinColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Mass"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/hairColor"
+                    app:layout_constraintStart_toEndOf="@id/fullName"
+                    app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/eyeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Eye Color"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/skinColor"
+                    app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/heightValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/height"
+                    app:layout_constraintStart_toStartOf="@id/height"
+                    app:layout_constraintTop_toBottomOf="@id/height"
+                    tools:text="Luke Skywalker" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/massValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/mass"
+                    app:layout_constraintStart_toStartOf="@id/mass"
+                    app:layout_constraintTop_toBottomOf="@id/mass"
+                    tools:text="Fair" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/eyeColorValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/eyeColor"
+                    app:layout_constraintStart_toStartOf="@id/eyeColor"
+                    app:layout_constraintTop_toBottomOf="@id/eyeColor"
+                    tools:text="Blonde" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintTop_toBottomOf="@id/massValue" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/homeWorld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Home World"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/skinColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Gender"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/hairColor"
+                    app:layout_constraintStart_toEndOf="@id/fullName"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/birthYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Birth Year"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/skinColor"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/homeWorldValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/homeWorld"
+                    app:layout_constraintStart_toStartOf="@id/homeWorld"
+                    app:layout_constraintTop_toBottomOf="@id/homeWorld"
+                    tools:text="Luke Skywalker" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/genderValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/gender"
+                    app:layout_constraintStart_toStartOf="@id/gender"
+                    app:layout_constraintTop_toBottomOf="@id/gender"
+                    tools:text="Fair" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/birthYearValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/birthYear"
+                    app:layout_constraintStart_toStartOf="@id/birthYear"
+                    app:layout_constraintTop_toBottomOf="@id/birthYear"
+                    tools:text="Blonde" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/filmsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Films"
+            android:textColor="@color/light_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="8dp"
+            android:id="@+id/filmList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filmsName"
+            tools:listitem="@layout/film_row" />
+
+        <ProgressBar
+            android:id="@+id/filmProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/yellow"
+            android:indeterminateTintMode="src_in"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filmsName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewFilmsError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filmsName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

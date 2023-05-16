@@ -6,12 +6,13 @@ import com.example.starwarsapp.model.Character
 import com.example.starwarsapp.model.FilmResponse
 import com.example.starwarsapp.model.HomeWorldResponse
 import com.example.starwarsapp.utils.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
+ @HiltViewModel
 class CharacterDetailViewModel @Inject constructor(
     private val characterRepository: CharacterRepository,
     savedStateHandle: SavedStateHandle

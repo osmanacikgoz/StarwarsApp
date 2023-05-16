@@ -25,9 +25,10 @@ class CharactersAdapter(private val onClickListener: OnClickListener) :
     }
 
     override fun onBindViewHolder(holder: CharactersAdapter.CharactersViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        val character = getItem(position)
+        holder.bind(character)
         holder.itemView.setOnClickListener {
-            onClickListener.onClick(position)
+            onClickListener.onClick(character!!)
         }
     }
 
@@ -58,8 +59,8 @@ class CharactersAdapter(private val onClickListener: OnClickListener) :
         }
     }
 
-    class OnClickListener(val clickListener: (position: Int) -> Unit) {
-        fun onClick(position: Int) = clickListener(position)
+    class OnClickListener(val clickListener: (character: Character) -> Unit) {
+        fun onClick(character: Character) = clickListener(character)
     }
 
 
