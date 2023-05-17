@@ -17,7 +17,7 @@
 
         <TextView
             android:id="@+id/itemTitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:textColor="@color/white"
@@ -28,10 +28,12 @@
             tools:text="The Empire Strikes Back" />
 
         <TextView
+            android:ellipsize="end"
             android:id="@+id/itemDescription"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="15"
+
             android:padding="8sp"
             android:textColor="@color/light_gray"
             app:layout_constraintBottom_toBottomOf="parent"

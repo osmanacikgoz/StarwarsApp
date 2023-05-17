@@ -1,6 +1,7 @@
 package com.example.starwarsapp.ui
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,10 +24,9 @@ class SplashFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        lifecycleScope.launch {
+        Handler().postDelayed(Runnable {
             findNavController().navigate(R.id.action_splashFragment_to_characterFragment)
-            delay(3000)
-        }
+        }, 3000)
         binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
 

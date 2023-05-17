@@ -31,6 +31,7 @@
         app:layout_constraintTop_toBottomOf="@id/image">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:textColor="@color/yellow"
             android:id="@+id/searchCharacter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:id="@+id/characterList"
         android:layout_width="0dp"
         android:layout_height="0dp"

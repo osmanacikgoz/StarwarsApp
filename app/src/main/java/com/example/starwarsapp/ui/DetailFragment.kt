@@ -13,12 +13,16 @@ import com.example.starwarsapp.adapter.FilmAdapter
 import com.example.starwarsapp.databinding.FragmentDetailBinding
 import com.example.starwarsapp.utils.Resource
 import com.example.starwarsapp.viewmodel.CharacterDetailViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
     private val viewModel: CharacterDetailViewModel by viewModels()
-    private val filmsAdapter: FilmAdapter? = null
+    private val filmsAdapter: FilmAdapter by lazy {
+        FilmAdapter()
+    }
 
 
     override fun onCreateView(
@@ -51,7 +55,7 @@ class DetailFragment : Fragment() {
                 when (event) {
                     is Resource.Success -> {
                         binding.filmProgressBar.isVisible = false
-                        filmsAdapter?.submitList(event.data)
+                        filmsAdapter.submitList(event.data)
                         binding.filmList.adapter = filmsAdapter
                     }
                     is Resource.Failure -> {

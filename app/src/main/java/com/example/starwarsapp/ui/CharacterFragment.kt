@@ -49,6 +49,7 @@ class CharacterFragment : Fragment() {
             binding.progress.isVisible = true
             hideKeyboard()
         }
+        setupObserver("")
         setupAdapter()
     }
 

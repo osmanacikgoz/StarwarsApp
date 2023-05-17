@@ -36,6 +36,8 @@ class CharacterDetailViewModel @Inject constructor(
 
     init {
         _details.value = myArguments!!
+        getHomeWorldData(myArguments.homeworld)
+        getFilmData()
 
     }
 

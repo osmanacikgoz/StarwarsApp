@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.findNavController()
 
         appBarConfiguration = AppBarConfiguration.Builder(
+            R.id.characterFragment,
+            R.id.splashFragment
 
         ).build()
 
